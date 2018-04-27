@@ -45,16 +45,19 @@ When the move is accepted by the server, it sends the current board position to 
 
 
 Let’s say the second player make the move:
+
 	> 9
 
 Both clients would then receive the new board position of:
+
 | . | . | . |
 |---|---|---|
 | . | X | . |
 | . | . | O |
 
 
-Either player can resign the game at anytime, by sending ‘r’. When the game is over, the server sends both players a result message, like:
+Either player can resign the game at anytime, by sending ‘r’. 
+When the game is over, the server sends both players a result message, like:
 
 	Game won by [first | second] player.
 Or
@@ -63,5 +66,3 @@ Or
 
 The clients close the connection to the server after the game is over. The clients can connect again to play another game.
 
-bi-directional sockets are used for the connection between the client and server. 
-npm libraries socket.io, socket.io-client are used.
