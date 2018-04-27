@@ -84,14 +84,16 @@ io.on('connection', function(socket){
                     gameBoard: thisServer.gameBoard,
                     currentPlayer: thisServer.currentPlayer
                 });
+
+                if (thisServer.gameMoveCount === 9) {
+                    thisServer.broadcast('gameOver', {
+                        status: 'Tie',
+                        gameBoard: thisServer.gameBoard
+                    });
+                }
+
             }
 
-            if (thisServer.gameMoveCount === 9) {
-                thisServer.broadcast('gameOver', {
-                    status: 'Tie',
-                    gameBoard: thisServer.gameBoard
-                });
-            }
         }
 
 
