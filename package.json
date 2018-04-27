@@ -1,7 +1,7 @@
 {
   "name": "tictactoe",
   "version": "1.0.0",
-  "description": "Multiplayer Tic-Tac-Toe game for UnblockedInc",
+  "description": "Multiplayer Tic-Tac-Toe game",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
