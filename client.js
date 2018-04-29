@@ -1,3 +1,5 @@
+'use strict';
+
 var getUserInput = require('readline-sync');
 var chalk = require('chalk');
 
